@@ -6,10 +6,12 @@ function FilterByName({ onChangeName }) {
 
     }
     return (
-        <>
-            <label htmlFor="name">Buscar personaje</label>
+        <div className="form">
+            <label htmlFor="name">Search character  </label>
             <input type="text" id="name" onChange={handleChange} />
-        </>
+        </div>
+
+
     )
 }
 

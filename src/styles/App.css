@@ -10,17 +10,19 @@ body {
     line-height: 1.5;
     font-family: Arial, sans-serif;
     /* Customize to your preferred font */
-    background-color: #fff;
-    color: #000;
+    background-color: black;
+    color: white;
 }
 
-/* Remove list styles */
 ul,
 ol {
     list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 10px;
 }
 
-/* Remove default link styles */
 a {
     text-decoration: none;
     color: inherit;
@@ -38,8 +40,32 @@ img {
     display: block;
 }
 
-/* Reset button styles */
-button {
-    all: unset;
-    cursor: pointer;
+.logo {
+    width: 40.5rem;
+    justify-self: center;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+}
+
+.form {
+    padding: 9px;
+    background-color: #41b4c9;
+    margin: 30px;
+    border: 4px solid #bfde42;
+    border-radius: 12px;
+}
+
+.character-card {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 35px;
+}
+
+.each-card {
+    background-color: #41b4c9;
+    padding: 5px;
+    text-align: center;
 }

@@ -57,7 +57,7 @@ function App() {
     return (
         <>
             <header>
-                <h1>Rick and Morty</h1>
+                <img src="/src/images/logo.png" alt="logo Rick and Morty" className="logo" />
             </header>
             <main>
                 <Routes>
