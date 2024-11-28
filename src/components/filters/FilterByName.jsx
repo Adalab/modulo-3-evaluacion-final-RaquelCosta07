@@ -7,7 +7,7 @@ function FilterByName({ onChangeName }) {
     }
     return (
         <>
-            <label htmlFor="name">Nombre personaje</label>
+            <label htmlFor="name">Buscar personaje</label>
             <input type="text" id="name" onChange={handleChange} />
         </>
     )
