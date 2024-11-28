@@ -83,3 +83,13 @@ form {
     border: 6px solid #bfde42;
     border-radius: 20px;
 }
+
+.species {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+
+    input {
+        margin: 5px
+    }
+}

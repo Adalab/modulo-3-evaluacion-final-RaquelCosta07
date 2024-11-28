@@ -11,6 +11,7 @@ import CharacterDetail from './CharacterDetail';
 function App() {
     const [characters, setCharacters] = useState([]);
     const [filterName, setFilterName] = useState("");
+    const [filterSpecies, setFilterSpecies] = useState("");
 
     useEffect(() => {
         getCharactersFromApi().then((charactersData) => {
@@ -23,12 +24,26 @@ function App() {
         setFilterName(valueInput);
     }
 
+    const handleFilterSpecies = (value) => {
+        setFilterSpecies(value);
+    }
+
 
     //Filter
 
-    const filteredCharacters = characters.filter((character) => {
-        return character.name.toLowerCase().includes(filterName.toLowerCase())
-    })
+    const filteredCharacters = characters
+        .filter((character) => {
+            return character.name.toLowerCase().includes(filterName.toLowerCase())
+        })
+        .sort((a, b) => a.name.localeCompare(b.name))
+        .filter((character) => {
+            if (filterSpecies === "") {
+                return true;
+            } else {
+                return character.species === filterSpecies;
+            }
+
+        })
 
 
 
@@ -42,14 +57,11 @@ function App() {
     const { pathname } = useLocation();
     const routeData = matchPath("/character/:idCharacter", pathname);
 
-    /* Si routeData es diferente de null,
-            obtener el id de la url
-        */
 
-    // Get ID from route if it matches the dynamic route
+
     const idCharacter = routeData !== null ? routeData.params.idCharacter : null;
 
-    // Find character with matching ID (ensure type consistency)
+
     const character = characters.find((character) => character.id === parseInt(idCharacter, 10));
 
     //console.log("idCharacter", idCharacter); // Debug: ID from route
@@ -63,11 +75,11 @@ function App() {
                 <Routes>
                     <Route path="/" element={(
                         <>
-                            <Filters onChangeName={handleFilterName} />
+                            <Filters onChangeName={handleFilterName} onChangeSpecies={handleFilterSpecies} />
                             {filteredCharacters.length > 0 ? (
                                 <CharactersList characters={filteredCharacters} />
                             ) : (
-                                <p>There is no character with the name: {filterName}</p>
+                                <p>**Sorry! There is no character with the name: {filterName}**</p>
                             )}
                         </>
                     )} />
