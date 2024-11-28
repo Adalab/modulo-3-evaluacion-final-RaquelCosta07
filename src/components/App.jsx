@@ -46,15 +46,14 @@ function App() {
             obtener el id de la url
         */
 
+    // Get ID from route if it matches the dynamic route
     const idCharacter = routeData !== null ? routeData.params.idCharacter : null;
-    console.log("idCharacter", idCharacter);
-    const character = characters.find((character) => {
 
-        return character.id === idCharacter;
-    })
-    console.log("character", character);
+    // Find character with matching ID (ensure type consistency)
+    const character = characters.find((character) => character.id === parseInt(idCharacter, 10));
 
-
+    console.log("idCharacter", idCharacter); // Debug: ID from route
+    console.log("character", character); // Debug: Found character or undefined
     return (
         <>
             <header>
@@ -68,7 +67,16 @@ function App() {
                             <CharactersList characters={filteredCharacters} />
                         </>
                     )} />
-                    <Route path="/character/:idCharacter" element={<CharacterDetail person={character} />} />
+                    <Route
+                        path="/character/:idCharacter"
+                        element={
+                            character ? (
+                                <CharacterDetail character={character} />
+                            ) : (
+                                <p>Loading character details...</p>
+                            )
+                        }
+                    />
 
 
                 </Routes>
