@@ -9,7 +9,6 @@ function CharacterDetail({ character }) {
 
     return (
         <div>
-            <p> Go back </p>
             <section className="card-details">
 
                 <img src={character.photo} alt={character.name} />

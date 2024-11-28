@@ -57,14 +57,18 @@ function App() {
     return (
         <>
             <header>
-                <img src="/src/images/logo.png" alt="logo Rick and Morty" className="logo" />
+                <img src={`${import.meta.env.BASE_URL}src/images/logo.png`} alt="logo Rick and Morty" className="logo" />
             </header>
             <main>
                 <Routes>
                     <Route path="/" element={(
                         <>
                             <Filters onChangeName={handleFilterName} />
-                            <CharactersList characters={filteredCharacters} />
+                            {filteredCharacters.length > 0 ? (
+                                <CharactersList characters={filteredCharacters} />
+                            ) : (
+                                <p>There is no character with the name: {filterName}</p>
+                            )}
                         </>
                     )} />
                     <Route
