@@ -8,16 +8,20 @@ function CharacterDetail({ character }) {
     }
 
     return (
-        <section className="card-details">
-            <img src={character.photo} alt={character.name} />
-            <div>
-                <h3>{character.name}</h3>
-                <p>Species: {character.species}</p>
-                <p>Origin: {character.planet}</p>
-                <p>Episodes: {character.episode.length}</p>
-                <p>Status: {character.status}</p>
-            </div>
-        </section>
+        <div>
+            <p> Go back </p>
+            <section className="card-details">
+
+                <img src={character.photo} alt={character.name} />
+                <div>
+                    <h3>{character.name}</h3>
+                    <p>Species: {character.species}</p>
+                    <p>Origin: {character.planet}</p>
+                    <p>Episodes: {character.episode.length}</p>
+                    <p>Status: {character.status}</p>
+                </div>
+            </section>
+        </div>
     );
 }
 
