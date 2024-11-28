@@ -6,6 +6,7 @@ import Filters from './filters/Filters';
 
 function App() {
     const [characters, setCharacters] = useState([]);
+    const [filterName, setFilterName] = useState("");
 
     useEffect(() => {
         getCharactersFromApi().then((charactersData) => {
@@ -13,14 +14,29 @@ function App() {
         });
     }, []);
 
+
+    const handleFilterName = (valueInput) => {
+        setFilterName(valueInput);
+    }
+
+
+    //Filter
+
+    const filteredCharacters = characters.filter((character) => {
+        return character.name.toLowerCase().includes(filterName.toLowerCase())
+    })
+    console.log(filteredCharacters)
+
+
+
     return (
         <>
             <header>
                 <h1>Rick and Morty</h1>
             </header>
             <main>
-                <Filters />
-                <CharactersList characters={characters} />
+                <Filters onChangeName={handleFilterName} />
+                <CharactersList characters={filteredCharacters} />
             </main>
         </>
     );

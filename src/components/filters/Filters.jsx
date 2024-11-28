@@ -1,9 +1,10 @@
 import FilterByName from "./FilterByName";
+/* eslint-disable react/prop-types*/
 
-function Filters() {
+function Filters({ onChangeName }) {
     return (
         <form>
-            <FilterByName />
+            <FilterByName onChangeName={onChangeName} />
         </form>
     )
 }
