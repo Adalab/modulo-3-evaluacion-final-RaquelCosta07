@@ -1,0 +1,45 @@
+/* Remove default padding and margins */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set common body styles */
+body {
+    line-height: 1.5;
+    font-family: Arial, sans-serif;
+    /* Customize to your preferred font */
+    background-color: #fff;
+    color: #000;
+}
+
+/* Remove list styles */
+ul,
+ol {
+    list-style: none;
+}
+
+/* Remove default link styles */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Remove borders and padding from tables */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Ensure images are responsive */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Reset button styles */
+button {
+    all: unset;
+    cursor: pointer;
+}

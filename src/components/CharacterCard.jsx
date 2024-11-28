@@ -1,8 +1,12 @@
+/* eslint-disable react/prop-types*/
 
-
-function CharacterCard() {
+function CharacterCard({ characterData }) {
     return (
-        <div>CharacterCard</div>
+        <li>
+            <img src={characterData.photo} alt={characterData.name} />
+            <h3>{characterData.name}</h3>
+            <h4>{characterData.species}</h4>
+        </li>
     )
 }
 

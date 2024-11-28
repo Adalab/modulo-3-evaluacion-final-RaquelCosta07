@@ -1,8 +1,23 @@
+/* eslint-disable react/prop-types*/
+
+import CharacterCard from "./CharacterCard";
 
 
-function CharactersList() {
+function CharactersList({ characters }) {
+
+    const characterElements = characters.map((character) => {
+        return <CharacterCard key={character.id} characterData={character} />
+    })
+
     return (
-        <div>CharactersList</div>
+        <section>
+            <ul>
+                {characterElements}
+            </ul>
+
+        </section>
+
+
     )
 }
 
