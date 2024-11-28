@@ -38,6 +38,7 @@ table {
 img {
     max-width: 100%;
     display: block;
+    border-radius: 10px;
 }
 
 .logo {
@@ -68,4 +69,17 @@ form {
     background-color: #41b4c9;
     padding: 5px;
     text-align: center;
+}
+
+.card-details {
+
+    display: flex;
+    background-color: #41b4c9;
+    align-items: center;
+    justify-content: center;
+    column-gap: 50px;
+    margin: 35px;
+    padding: 48px;
+    border: 6px solid #bfde42;
+    border-radius: 20px;
 }

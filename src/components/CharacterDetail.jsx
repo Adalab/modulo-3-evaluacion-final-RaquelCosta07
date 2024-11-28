@@ -8,13 +8,15 @@ function CharacterDetail({ character }) {
     }
 
     return (
-        <section>
+        <section className="card-details">
             <img src={character.photo} alt={character.name} />
-            <h3>{character.name}</h3>
-            <p>Species: {character.species}</p>
-            <p>Origin: {character.planet}</p>
-            <p>Episodes: {character.episode.length}</p>
-            <p>Status: {character.status}</p>
+            <div>
+                <h3>{character.name}</h3>
+                <p>Species: {character.species}</p>
+                <p>Origin: {character.planet}</p>
+                <p>Episodes: {character.episode.length}</p>
+                <p>Status: {character.status}</p>
+            </div>
         </section>
     );
 }
