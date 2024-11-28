@@ -2,7 +2,7 @@
 
 
 function CharacterDetail({ character }) {
-    // Show a loading message or fallback UI if character is undefined
+    //Show a loading message or fallback UI if character is undefined
     if (!character) {
         return <p>Loading character details...</p>;
     }
@@ -11,10 +11,10 @@ function CharacterDetail({ character }) {
         <section>
             <img src={character.photo} alt={character.name} />
             <h3>{character.name}</h3>
-            <h4>{character.species}</h4>
-            <p>{character.planet}</p>
-            <p>{character.episodes} episodes</p>
-            <p>{character.status}</p>
+            <p>Species: {character.species}</p>
+            <p>Origin: {character.planet}</p>
+            <p>Episodes: {character.episode.length}</p>
+            <p>Status: {character.status}</p>
         </section>
     );
 }

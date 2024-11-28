@@ -52,8 +52,8 @@ function App() {
     // Find character with matching ID (ensure type consistency)
     const character = characters.find((character) => character.id === parseInt(idCharacter, 10));
 
-    console.log("idCharacter", idCharacter); // Debug: ID from route
-    console.log("character", character); // Debug: Found character or undefined
+    //console.log("idCharacter", idCharacter); // Debug: ID from route
+    //console.log("character", character); // Debug: Found character or undefined
     return (
         <>
             <header>
