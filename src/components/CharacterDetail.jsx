@@ -8,11 +8,11 @@ function CharacterDetail({ character }) {
     }
 
     return (
-        <div>
+        <div className="card">
             <section className="card-details">
 
                 <img src={character.photo} alt={character.name} />
-                <div>
+                <div className="card-text">
                     <h3>{character.name}</h3>
                     <p>Species: {character.species}</p>
                     <p>Origin: {character.planet}</p>

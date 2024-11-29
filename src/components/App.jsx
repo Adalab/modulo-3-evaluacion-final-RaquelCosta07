@@ -30,7 +30,6 @@ function App() {
     }
 
 
-    //Filter
 
     const filteredCharacters = characters
         .filter((character) => {
@@ -47,14 +46,6 @@ function App() {
         })
 
 
-
-    /* Ruta dinámica
-    Saber si estoy en la ruta dinámica (en CharacterDetail)
-    Obtener el id de la ruta (id del personaje)
-    Buscar en mi lista de personas, el personaje con ese id
-    Pasaré la info de esa persona a CharacterDetail
-    */
-
     const { pathname } = useLocation();
     const routeData = matchPath("/character/:idCharacter", pathname);
 
@@ -65,8 +56,7 @@ function App() {
 
     const character = characters.find((character) => character.id === parseInt(idCharacter, 10));
 
-    //console.log("idCharacter", idCharacter); // Debug: ID from route
-    //console.log("character", character); // Debug: Found character or undefined
+
     return (
         <>
             <header>
@@ -80,7 +70,7 @@ function App() {
                             {filteredCharacters.length > 0 ? (
                                 <CharactersList characters={filteredCharacters} />
                             ) : (
-                                <p>**Sorry! There is no character with the name: {filterName}**</p>
+                                <p className='sorry'>**Sorry! There is no character with the name: {filterName}**</p>
                             )}
                         </>
                     )} />

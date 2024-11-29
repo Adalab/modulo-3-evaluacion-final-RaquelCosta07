@@ -82,6 +82,16 @@ form {
     padding: 48px;
     border: 6px solid #bfde42;
     border-radius: 20px;
+    width: 50%;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+}
+
+.card-text {
+    font-size: x-large;
 }
 
 .species {
@@ -92,4 +102,8 @@ form {
     input {
         margin: 5px
     }
+}
+
+.sorry {
+    justify-self: center;
 }
