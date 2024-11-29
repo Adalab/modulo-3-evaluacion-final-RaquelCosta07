@@ -5,6 +5,7 @@ import CharactersList from './CharactersList';
 import Filters from './filters/Filters';
 import { Routes, Route, useLocation, matchPath } from 'react-router-dom';
 import CharacterDetail from './CharacterDetail';
+import logo from '../images/logo.png'
 
 
 
@@ -69,7 +70,7 @@ function App() {
     return (
         <>
             <header>
-                <img src={`${import.meta.env.BASE_URL}src/images/logo.png`} alt="logo Rick and Morty" className="logo" />
+                <img src={logo} alt="Logo Rick and Morty" className="logo" />
             </header>
             <main>
                 <Routes>
