@@ -11,7 +11,7 @@ Welcome to the **Rick and Morty Character Filter** project! This is a React appl
 - **Filter Characters by Species:** Select between species (e.g., Human, Alien) to refine your search.
 - **Character Details:** Click on a character to see more information, such as:
   - Planet of origin
-  - Status (Alive, Dead, or Unknown)
+  - Status (Alive or Dead)
   - Number of episodes in which they appear
 - **Responsive Design:** Works on different screen sizes for better user experience.
 
