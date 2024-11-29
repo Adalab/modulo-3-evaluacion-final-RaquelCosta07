@@ -2,8 +2,6 @@
 
 Welcome to the **Rick and Morty Character Filter** project! This is a React application that allows users to explore characters from the popular show *Rick and Morty*. Users can filter characters by name or species and view detailed information about each character.
 
-![App Preview](./path-to-your-screenshot.png)  
-*(Replace `./path-to-your-screenshot.png` with the actual path to your screenshot in your repository.)*
 
 ---
 
@@ -40,3 +38,23 @@ Welcome to the **Rick and Morty Character Filter** project! This is a React appl
 
    ```bash
    git clone https://github.com/<your-username>/<your-repo-name>.git
+
+2. Navigate to the project folder:
+
+   ```bash
+   cd <your-repo-name>
+
+3. Install dependencies:
+
+   ```bash
+   npm install
+
+4. Start the development server:
+
+    ```bash
+     npm run dev
+    
+5. Open the application in your browser:
+
+   ```bash
+     http://localhost:5173
