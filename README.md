@@ -58,3 +58,29 @@ Welcome to the **Rick and Morty Character Filter** project! This is a React appl
 
    ```bash
      http://localhost:5173
+
+
+## 📡 API Integration
+
+This project uses the [Rick and Morty API](https://rickandmortyapi.com/) to fetch character data.
+
+### Example Endpoints
+
+- **Get all characters:**  
+  [`https://rickandmortyapi.com/api/character`](https://rickandmortyapi.com/api/character)
+
+- **Filter by name:**  
+  [`https://rickandmortyapi.com/api/character/?name=<name>`](https://rickandmortyapi.com/api/character/?name=<name>)
+
+- **Filter by species:**  
+  [`https://rickandmortyapi.com/api/character/?species=<species>`](https://rickandmortyapi.com/api/character/?species=<species>)
+
+---
+
+## 🎉 Enjoy!
+
+Thank you for exploring the **Rick and Morty Character Filter** project!  
+Feel free to share your feedback or contribute to make it even better. 🚀
+
+Happy coding! 😊
+
